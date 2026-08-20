@@ -5,12 +5,15 @@
 ## 安装
 
 - 把要用的目录复制（或软链）到 `~/.claude/skills/` 下，重开 Claude Code 即可。
-- 使用workbuddy直接添加skill
+- 或把压缩包拉进workbuddy: `请帮我安装这些skillls并配置环境`
 ![alt text](imgs/image.png)
 
 依赖 [uv](https://docs.astral.sh/uv/)，各 skill 首次运行会自行拉取所需环境与工具。
 
 要跑完整条链路还得配两处凭证：`skills/clip_highlight/scripts/.env` 的 `gemini_api_key`、`skills/tencent_docs_uploader/config.json` 的腾讯文档凭证。两个文件都在 `.gitignore` 里，照各自 `SKILL.md` 填。
+
+## 使用
+- 用自然语言请Agent打轴 / 翻译 / 做路灯
 
 ## Skills
 
