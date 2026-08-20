@@ -10,7 +10,7 @@
 
 依赖 [uv](https://docs.astral.sh/uv/)，各 skill 首次运行会自行拉取所需环境与工具。
 
-要跑完整条链路还得配两处凭证：`skills/clip_highlight/scripts/.env` 的 `gemini_api_key`、`skills/tencent_docs_uploader/config.json` 的腾讯文档凭证。两个文件都在 `.gitignore` 里，照各自 `SKILL.md` 填。
+要跑完整条链路还得配两处凭证：`skills/clip_highlight/scripts/.env` [Gemini](https://aistudio.google.com/api-keys)的 `gemini_api_key`、`skills/tencent_docs_uploader/config.json` 的[腾讯文档凭证](https://docs.qq.com/open/document/app/get_started.html#)。两个文件都在 `.gitignore` 里，照各自 `SKILL.md` 填。
 
 ## 使用
 - 用自然语言请Agent打轴 / 翻译 / 做路灯
