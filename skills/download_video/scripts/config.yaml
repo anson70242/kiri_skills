@@ -1,0 +1,46 @@
+# config.yaml
+streamers:
+  # 提示：Youtube_channel_id 可通过 yt-dlp --print channel_id [视频链接] 获取
+  # 目前支持平台: youtube, twitch, twitcast, twitter(x)
+  - name: "Yuka"
+    accounts:
+      - platform: "youtube"
+        channel_id: "UCdvq5i3RyRsoTqITD1xSxNw"
+
+      - platform: "twitch"
+        channel_name: "柊優花 (hiiragiyukaofficial)"
+        
+  - name: "Haru"
+    accounts:
+      - platform: "youtube"
+        channel_id: "UCrOV-crqUmRluPVOjjVs-Xw"
+
+      - platform: "twitcast"
+        channel_name: "shino_nome22"
+
+      - platform: "twitter"
+        channel_id: "shino_haru101"
+
+  - name: "Kanon"
+    accounts:
+      - platform: "youtube"
+        channel_id: "UCGvqjigtg9uGXHwqT27wS9A"
+
+  - name: "Yuno"
+    accounts:
+      - platform: "youtube"
+        channel_id: "UC99kOG6_9RD0mR3OG4EOfxw"
+
+  - name: "Nonoka"
+    accounts:
+      - platform: "youtube"
+        channel_id: "UCGeCnpimiSN5rgiKbJzHd3A"
+
+tools_paths:
+  # 注意：程序会自动在以下路径前加上 assets/ 文件夹名
+  # 这些工具由 scripts/setup_assets.py 下载，不进 git；路径刻意不带版本号
+  yt_dlp: "yt-dlp/yt-dlp.exe"
+  twitch_downloader_cli: "TwitchDownloaderCLI/TwitchDownloaderCLI.exe"
+  ffmpeg: "ffmpeg/bin/ffmpeg.exe"
+  ffprobe: "ffmpeg/bin/ffprobe.exe"
+  node: "node/node.exe"

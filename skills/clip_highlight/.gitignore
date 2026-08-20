@@ -1,0 +1,11 @@
+# 凭证（.env.example 要保留，实际的 .env 不能进 git）
+scripts/.env
+
+# 中间产物（切好的分片、分析结果）
+tmp/
+outputs/
+
+# uv / Python
+.venv/
+__pycache__/
+*.py[cod]

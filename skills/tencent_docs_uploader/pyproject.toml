@@ -1,0 +1,10 @@
+[project]
+name = "tencent-docs-uploader"
+version = "0.1.0"
+description = "Upload a local Excel sheet as a new sheet in a Tencent Docs spreadsheet"
+requires-python = ">=3.9"
+dependencies = [
+    "openpyxl",
+    "pandas",
+    "requests",
+]

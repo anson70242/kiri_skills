@@ -1,0 +1,2 @@
+# 脚本产物：任意层级的 outputs/ 都不进 git
+outputs/

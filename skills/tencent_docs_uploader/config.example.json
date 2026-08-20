@@ -1,0 +1,6 @@
+{
+  "access_token": "<your Tencent Docs access token>",
+  "client_id": "<your app client id>",
+  "open_id": "<your open id>",
+  "file_id": "<the <FILE_ID> in https://docs.qq.com/sheet/<FILE_ID>>"
+}

@@ -1,0 +1,7 @@
+# 每场直播的运行状态（state.json），跟着素材走，不进版本库
+runs/
+
+# uv / Python
+.venv/
+__pycache__/
+*.py[cod]

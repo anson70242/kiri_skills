@@ -1,0 +1,13 @@
+[project]
+name = "autokiri-clip-highlight"
+version = "0.1.0"
+description = "AutoKiri - 直播字幕分片与高光切片分析"
+requires-python = ">=3.11"
+dependencies = [
+    "google-genai",
+    "openpyxl>=3.1.5",
+    "python-dotenv",
+]
+
+[tool.uv]
+package = false

@@ -1,0 +1,1 @@
+原作者： [caca2331/finesub: Pipeline that turns audio/video into Chinese subtitles: vocal separation → VAD/ASR → optional LLM correction, translation, and knowledge-assisted polish.](https://github.com/caca2331/finesub)

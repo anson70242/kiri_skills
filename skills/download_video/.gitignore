@@ -1,0 +1,15 @@
+# 内置工具（约 370MB 二进制）
+# 不进 git，改由 scripts/setup_assets.py 按需下载
+assets/**
+!assets/.gitkeep
+
+# 下载产物
+videos/
+
+# 凭证（.env.example 要保留，实际的 .env 不能进 git）
+scripts/.env
+
+# uv / Python
+.venv/
+__pycache__/
+*.py[cod]

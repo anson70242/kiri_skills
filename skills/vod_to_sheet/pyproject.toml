@@ -1,0 +1,11 @@
+[project]
+name = "autokiri-vod-to-sheet"
+version = "0.1.0"
+description = "AutoKiri - 直播回放到云端切片表的全流程串接"
+requires-python = ">=3.11"
+# 本 skill 只负责按顺序调用另外三个 skill 的 CLI，自己不碰它们的依赖，
+# 所以这里是空的 —— 每步的依赖由各自的 uv run 现场解决。
+dependencies = []
+
+[tool.uv]
+package = false
