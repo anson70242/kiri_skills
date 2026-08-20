@@ -202,5 +202,6 @@ uv run scripts/run_pipeline.py --name 20260326_haru --only upload
 | 表格里的时间超过片长 | `references/manual-steps.md` 的「出表后核一眼时间轴」 |
 | 下载失败、要凭证、认不出实况主 | `download_video/SKILL.md` |
 | ASR 慢、回退 CPU、显卡不支持 | `finesub/SKILL.md` |
+| translate / analysis 一启动就报清不掉 `tmp/` | 平台的 safe-delete 沙箱拦了删除，设 `CODEBUDDY_SAFE_DELETE_SANDBOX=0` 或手动清空 `tmp/`；`dangerouslyDisableSandbox` 挡不住它。详见 `clip_highlight/SKILL.md` 的「清不掉 tmp/」 |
 | 翻译漏条、时间戳越界、术语译错 | `clip_highlight/SKILL.md` 与 `clip_highlight/references/lessons.md` |
 | 上传被拒、子表撞名、格数超限 | `tencent_docs_uploader/SKILL.md` 与其 `references/api-notes.md` |

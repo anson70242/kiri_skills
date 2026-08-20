@@ -188,7 +188,11 @@ def main() -> int:
     # 先清空 tmp/，保证下面的分片一定是本次现切的。
     # 注意这会连 translate.py 的 tmp/translated_srts 一起删掉，
     # 它的断点续跑状态会丢失(交付物在 outputs/ 下，不受影响)。
-    clear_tmp()
+    # 清不干净就别往下走：下面 list_srts(SRT_DIR) 是整个目录一起读，
+    # 上次跑剩的分片会被当成本次的一起送进模型。
+    if clear_tmp() < 0:
+        print("[Error] tmp/ 没清干净，停下来避免把上次的分片混进这次分析。")
+        return 1
 
     bilingual_path = merge_bilingual(
         args.srt, translated_path, BILINGUAL_DIR / f"{args.srt.stem}.srt"

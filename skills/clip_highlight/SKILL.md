@@ -97,6 +97,24 @@ uv run scripts/preprocess.py test.srt --max-blocks 800
 uv run scripts/clear_tmp.py
 ```
 
+#### 清不掉 tmp/：平台的 safe-delete 沙箱
+
+某些平台（如 CodeBuddy）会挂一层 safe-delete shim 拦截删除动作。`translate.py` 和 `analysis.py` 一启动就清 `tmp/`，被拦住的话报的是这个：
+
+```
+[Error] Failed to clear N item(s) under tmp: ...
+[Error] 删不掉多半是平台的 safe-delete 沙箱拦了删除动作……
+```
+
+两条出路，选一条：
+
+- 设 `CODEBUDDY_SAFE_DELETE_SANDBOX=0` 再跑
+- 自己手动把 `tmp/` 下的东西清空（删空目录一般不会被拦），再重跑
+
+**`dangerouslyDisableSandbox` 挡不住这层 shim**，别在那里绕。
+
+清不掉时 `translate.py` / `analysis.py` 会**当场停下（退出码 1）而不是硬跑** —— 因为它们之后是整个目录一起读，上次跑剩的分片会被当成本次的一起送进模型。`to_excel.py` 的清理在最后一步，清不掉只报 `[Warning]`，xlsx 已经写好了，不影响交付。
+
 ## 产物在哪
 
 **交付物**在 `outputs/<SRT名字>/` 下，每场直播一个子目录：

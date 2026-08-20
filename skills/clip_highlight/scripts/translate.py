@@ -174,8 +174,12 @@ def main() -> int:
     # 默认清空 tmp/，保证本次用的分片一定是按当前 --max-cues 现切的。
     # 不清的话，上次用别的粒度跑剩下的 tmp/translated_srts/ 会被错误复用。
     # 崩溃后要接着上次跑，用 --resume 保留它们。
+    # 清不干净就别往下走：split_srt 之后是整个目录一起读，
+    # 上次跑剩的分片会被当成本次的一起翻。
     if not args.resume:
-        clear_tmp()
+        if clear_tmp() < 0:
+            print("[Error] tmp/ 没清干净，停下来避免复用上次的分片。")
+            return 1
 
     parts = split_srt(args.srt, args.max_cues, SRT_DIR)
     if not parts:

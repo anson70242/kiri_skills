@@ -232,8 +232,9 @@ def main() -> int:
     # 流水线最后一步，中间产物到这里就没用了。
     # 交付物都在 outputs/ 下，不受影响。
     # --from-json 是事后修表，不是跑流水线 —— 别顺手清掉人家还在看的 tmp/。
-    if not args.from_json:
-        clear_tmp()
+    # 清不掉不影响交付 —— xlsx 上一行已经写完了，报一句就收工。
+    if not args.from_json and clear_tmp() < 0:
+        print("[Warning] tmp/ 没清干净，但 xlsx 已经写好了，不影响这次交付。")
     return 0
 
 
