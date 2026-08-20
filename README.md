@@ -1,6 +1,6 @@
 # kiri_skills
 
-给 Claude Code 用的一组 skill，围绕直播回放做下载、字幕与切片表。
+给 AI Agent 用的一组 skill，围绕直播回放做下载、字幕与切片表。
 
 ## 安装
 
