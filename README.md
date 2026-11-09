@@ -24,6 +24,7 @@
 | [finesub](skills/finesub/) | 音视频转精修中文字幕（人声分离 → VAD+ASR → LLM 纠错翻译 → SRT） | ✅ 可用 |
 | [clip_highlight](skills/clip_highlight/) | 日文 SRT → 中文字幕 → 高光切片分析 → 剪辑用 xlsx | ✅ 可用 |
 | [tencent_docs_uploader](skills/tencent_docs_uploader/) | 上传 xlsx 到腾讯文档在线表格 | ✅ 可用(配合clip_highlight) |
+| [video-to-vertical](skills/video-to-vertical/)         | 横屏视频转竖屏视频                                           | ✅ 可用                     |
 | [template](skills/template/) | 新 skill 的空骨架 | — |
 
 **做整场切片就用 `vod_to_sheet`，它把四步的调用、路径和编码都包好了。**
